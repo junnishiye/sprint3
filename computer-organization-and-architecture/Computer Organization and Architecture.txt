@@ -13,5 +13,6 @@ João Vitor Jun - RM: 572079
 Link Youtube - https://youtu.be/fC-YNzV9OD4
 
 Link Wokwi - https://wokwi.com/projects/475074425949813761
+Inicie a simulação e clique no fotoresistor para modificar a incidência de luz.
 
 Link Github - https://github.com/junnishiye/sprint3/tree/main/computer-organization-and-architecture
