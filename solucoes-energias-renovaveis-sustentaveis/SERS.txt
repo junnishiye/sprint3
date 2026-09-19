@@ -1,0 +1,18 @@
+Davi Pacheco - RM: 569487
+
+Gabriel Silveira - RM: 568910
+
+Henrique Aragão - RM: 570529
+
+André Félix - RM: 571691
+
+João Vitor Jun - RM: 572079
+
+
+
+Link Youtube - https://youtu.be/ptzZs9wCF2M
+
+Link Projeto - https://wokwi.com/projects/475074425949813761
+Inicie a simulação e clique no fotoresistor para modificar a incidência de luz.
+
+Link Github - https://github.com/junnishiye/sprint3/tree/main/solucoes-energias-renovaveis-sustentaveis
