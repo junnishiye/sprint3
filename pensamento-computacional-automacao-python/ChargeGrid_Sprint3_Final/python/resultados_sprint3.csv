@@ -1,0 +1,6 @@
+Cenario,AUTH,VAGA,ENERGIA,S_SESSAO,PRIORIDADE,P_74HC,FINAL,ENERGIA_PCT
+1 - Sessao normal,1,1,1,1,0,0,1,85
+2 - Energia baixa,1,1,0,1,0,0,1,35
+3 - Sem vaga,1,0,1,0,0,0,0,90
+4 - Prioridade liberada,1,1,1,1,1,1,1,85
+5 - Prioridade bloqueada,1,1,1,1,1,0,0,85

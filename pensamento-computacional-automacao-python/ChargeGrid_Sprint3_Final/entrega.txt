@@ -1,0 +1,28 @@
+CHARGEGRID INTELLIGENCE — SPRINT 3
+PROTOTIPAGEM FUNCIONAL E INTEGRAÇÃO
+
+EQUIPE
+
+André Balan Felix dos Santos — RM 571691
+Davi Sinhorini Pacheco — RM 569487
+Gabriel da Silva Silveira — RM 568910
+Henrique de Souza Aragão — RM 570529
+João Vitor Jun Nishiye de Souza — RM 572079
+
+VÍDEO DA ENTREGA — YOUTUBE (NÃO LISTADO)
+
+[SUBSTITUIR PELO LINK REAL DO VÍDEO NO YOUTUBE — NÃO LISTADO]
+
+REPOSITÓRIO GITHUB
+
+[SUBSTITUIR PELO LINK REAL DO REPOSITÓRIO GITHUB]
+
+VALIDAÇÃO
+
+Os cinco cenários funcionais foram executados no Wokwi e confirmaram o comportamento esperado dos LEDs, LCD e telemetria serial:
+
+1. Sessão normal
+2. Energia baixa
+3. Sem vaga
+4. Prioridade liberada
+5. Prioridade bloqueada

@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "author": "ChargeGrid Intelligence",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 20,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "auth",
+      "top": -120,
+      "left": -280,
+      "attrs": {
+        "value": "",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "vaga",
+      "top": -40,
+      "left": -280,
+      "attrs": {
+        "value": "",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "prioridade",
+      "top": 40,
+      "left": -280,
+      "attrs": {
+        "value": "1",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "p74hc",
+      "top": 120,
+      "left": -280,
+      "attrs": {
+        "value": "1",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 210,
+      "left": -280,
+      "attrs": {
+        "lux": "700"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "green",
+      "top": -80,
+      "left": 270,
+      "attrs": {
+        "color": "green",
+        "label": "AUTORIZADA"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rg",
+      "top": -80,
+      "left": 340,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "yellow",
+      "top": 20,
+      "left": 270,
+      "attrs": {
+        "color": "yellow",
+        "label": "LIMITADA"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "ry",
+      "top": 20,
+      "left": 340,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "red",
+      "top": 120,
+      "left": 270,
+      "attrs": {
+        "color": "red",
+        "label": "BLOQUEADA"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rr",
+      "top": 120,
+      "left": 340,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": 280,
+      "left": 30,
+      "attrs": {
+        "pins": "i2c",
+        "i2cAddress": "0x27"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "auth:2",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "auth:1",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "vaga:2",
+      "uno:3",
+      "blue",
+      []
+    ],
+    [
+      "vaga:1",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "prioridade:2",
+      "uno:5",
+      "orange",
+      []
+    ],
+    [
+      "prioridade:1",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "p74hc:2",
+      "uno:4",
+      "purple",
+      []
+    ],
+    [
+      "p74hc:1",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "p74hc:3",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "ldr:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "ldr:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "ldr:AO",
+      "uno:A0",
+      "orange",
+      []
+    ],
+    [
+      "uno:8",
+      "rg:1",
+      "green",
+      []
+    ],
+    [
+      "rg:2",
+      "green:A",
+      "green",
+      []
+    ],
+    [
+      "green:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:9",
+      "ry:1",
+      "yellow",
+      []
+    ],
+    [
+      "ry:2",
+      "yellow:A",
+      "yellow",
+      []
+    ],
+    [
+      "yellow:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:10",
+      "rr:1",
+      "red",
+      []
+    ],
+    [
+      "rr:2",
+      "red:A",
+      "red",
+      []
+    ],
+    [
+      "red:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:5V",
+      "lcd:VCC",
+      "red",
+      []
+    ],
+    [
+      "uno:GND.2",
+      "lcd:GND",
+      "black",
+      []
+    ],
+    [
+      "uno:A4",
+      "lcd:SDA",
+      "green",
+      []
+    ],
+    [
+      "uno:A5",
+      "lcd:SCL",
+      "blue",
+      []
+    ]
+  ],
+  "serialMonitor": {
+    "display": "terminal"
+  }
+}

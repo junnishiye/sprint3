@@ -1,0 +1,94 @@
+# Roteiro final — vídeo técnico de até 5 minutos
+
+Os cinco cenários já foram executados no Wokwi e confirmaram LEDs, LCD e telemetria. Como não foram registrados nesta etapa valores numéricos exatos de `ENERGIA_PCT` nem um cronômetro formal de resposta, o roteiro não inventa esses números. Durante a gravação, mostre o valor real que aparecer no Serial Monitor.
+
+## 0:00–0:25 — Contexto
+
+“Na Sprint 3 integramos a lógica de sessão, o módulo 74HC da Sprint 2, Arduino, sensor LDR, LEDs, LCD e uma camada Python para validação independente da lógica.”
+
+## 0:25–0:55 — Arquitetura
+
+Mostrar:
+
+```text
+Entradas/LDR → Arduino → S_sessao + P_74HC → FINAL
+                                      ↓
+                                LEDs + LCD
+                                      ↓
+                                  Serial → Python
+```
+
+Explicar que `P_74HC` entra como sinal lógico externo no Arduino.
+
+## 0:55–1:25 — Tinkercad / 74HC
+
+“O circuito 74HC continua responsável pela decisão do equipamento prioritário. Nesta integração, sua saída P_74HC é recebida pelo Arduino.”
+
+Não afirmar que o Wokwi reproduz internamente as portas 74HC.
+
+## 1:25–1:55 — Teste 1: sessão normal
+
+Configurar AUTH=1, VAGA=1, PRIORIDADE=0, P74HC=0 e energia suficiente.
+
+Mostrar LED verde, LCD `RECARGA OK` e telemetria `FINAL=1`.
+
+Se mencionar a energia, leia o `ENERGIA_PCT` real diretamente do Serial Monitor.
+
+## 1:55–2:25 — Teste 2: energia baixa
+
+Reduzir a iluminação do LDR.
+
+Mostrar o `ENERGIA_PCT` real, LED amarelo, LCD `LIMITADA` e `FINAL=1`.
+
+Fala:
+
+“Com a energia abaixo do limiar de 50%, a sessão continua autorizada pela expressão herdada, mas a política de automação muda para o estado limitado.”
+
+## 2:25–2:55 — Teste 3: sem vaga
+
+Desativar VAGA.
+
+Mostrar `S_SESSAO=0`, `FINAL=0`, LED vermelho e LCD `BLOQUEADA`.
+
+## 2:55–3:35 — Testes 4 e 5: prioridade
+
+Ativar PRIORIDADE=1 e P74HC=1. Mostrar LED verde, LCD `PRIORIDADE OK` e `FINAL=1`.
+
+Depois alterar somente P74HC para 0. Mostrar LED vermelho, LCD `BLOQUEADA` e `FINAL=0`.
+
+Fala:
+
+“Esse teste demonstra a integração entre a solicitação prioritária e a saída do circuito 74HC.”
+
+## 3:35–4:15 — Python
+
+Executar:
+
+```bash
+python python/chargegrid_sprint3.py --demo
+python python/chargegrid_sprint3.py --self-test
+```
+
+Fala:
+
+“O Python não apenas repete o valor recebido. Ele recalcula S_sessao e FINAL independentemente e compara os resultados com a telemetria do Arduino.”
+
+Mostrar `Consistência: OK`.
+
+## 4:15–4:40 — Protocolo e CSV
+
+Mostrar:
+
+```text
+CG,AUTH,VAGA,ENERGIA,S_SESSAO,PRIORIDADE,P_74HC,FINAL,ENERGIA_PCT
+```
+
+e o CSV gerado.
+
+## 4:40–5:00 — Conclusão
+
+“Na Sprint 3 transformamos as expressões booleanas em uma integração executável: entradas e sensor são processados pelo Arduino, a decisão aparece nos LEDs e LCD, os dados são enviados por serial e uma segunda implementação em Python verifica a consistência. Os cinco cenários foram executados e validados no Wokwi.”
+
+## Regra para a gravação
+
+Não afirmar valores específicos de LDR ou tempos de resposta que não estejam visíveis na gravação. Use os valores reais que aparecerem no Serial Monitor.
