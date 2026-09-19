@@ -1,0 +1,11 @@
+CHARGEGRID INTELLIGENCE — SPRINT 3
+
+Projeto Wokwi:
+https://wokwi.com/projects/475523663184705537
+
+Descrição:
+Protótipo funcional simulado do ChargeGrid Intelligence — Sprint 3,
+com Arduino, lógica de integração, sensor LDR, LEDs, LCD e telemetria
+serial.
+
+O link acima corresponde ao projeto Wokwi utilizado na demonstração.
