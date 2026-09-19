@@ -1,6 +1,0 @@
-timestamp,auth,vaga,energia_arduino,energia_python,s_sessao_arduino,s_sessao_python,prioridade,p_74hc,final_arduino,final_python,energia_pct,status,potencia_kw,consistencia
-2026-09-19T16:02:20,1,1,1,1,1,1,0,0,1,1,85,AUTORIZADA,22.0,OK
-2026-09-19T16:02:20,1,1,0,0,1,1,0,0,1,1,35,LIMITADA,11.0,OK
-2026-09-19T16:02:20,1,0,1,1,0,0,0,0,0,0,90,BLOQUEADA,0.0,OK
-2026-09-19T16:02:20,1,1,1,1,1,1,1,1,1,1,85,AUTORIZADA,22.0,OK
-2026-09-19T16:02:20,1,1,1,1,1,1,1,0,0,0,85,BLOQUEADA,0.0,OK
