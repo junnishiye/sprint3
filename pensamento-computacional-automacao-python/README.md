@@ -1,3 +1,4 @@
+[README (3).md](https://github.com/user-attachments/files/32445680/README.3.md)
 # ChargeGrid Intelligence — Sprint 3
 ## Prototipagem Funcional e Integração
 
@@ -341,9 +342,11 @@ Portanto, os cenários 4 e 5 validam a integração da saída do 74HC, mas não 
 
 ## 11. Tabela verdade completa
 
-Consulte:
+Gere sob demanda com:
 
-`docs/tabela_verdade_final.md`
+```bash
+python python/chargegrid_sprint3.py --truth-table
+```
 
 Ela contém as 32 combinações do sistema.
 
@@ -403,7 +406,7 @@ Substitua `COM3` pela porta correta.
 
 Abra o projeto com:
 
-- `arduino/sketch.ino`
+- `wokwi/sketch.ino`
 - `wokwi/diagram.json`
 - `wokwi/libraries.txt`
 
@@ -560,25 +563,18 @@ Também é necessário confirmar que o Serial Monitor apresenta exatamente nove 
 ## 16. Arquivos
 
 ```text
-ChargeGrid_Sprint3_Final/
+pensamento-computacional-automacao-python/
 ├── README.md
-├── entrega.txt
-├── arduino/
-│   └── sketch.ino
-├── python/
-│   ├── chargegrid_sprint3.py
-│   ├── requirements.txt
-│   └── resultados_sprint3.csv
-├── wokwi/
-│   ├── diagram.json
-│   └── libraries.txt
-├── docs/
-│   ├── arquitetura.md
-│   ├── protocolo_serial.md
-│   ├── resultados.md
-│   ├── tabela_verdade_final.md
-│   └── roteiro_video.txt
-└── circuito_tinkercad.txt
+└── ChargeGrid_Sprint3_Final/
+    ├── python/
+    │   ├── chargegrid_sprint3.py
+    │   ├── requirements.txt
+    │   └── resultados_sprint3.csv
+    └── wokwi/
+        ├── sketch.ino
+        ├── diagram.json
+        ├── libraries.txt
+        └── wokwi_link.txt
 ```
 
 ---
