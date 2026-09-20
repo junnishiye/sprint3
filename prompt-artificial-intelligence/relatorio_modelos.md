@@ -16,7 +16,7 @@ Todas as configuracoes foram executadas sobre o mesmo grafo de agente, com as me
 | Configuracao        | Modelo        | Provedor | temperature | top_p | max_tokens |
 | ------------------- | ------------- | -------- | ----------: | ----: | ---------: |
 | GPT-4o-mini (T=0.2) | `gpt-4o-mini` | openai   |         0.2 |   0.9 |        700 |
-| GPT-4o-mini (T=0.9) | `gpt-4o-mini` | openai   |         0.9 |   1.0 |        700 |
+| gemini-flash (T=0.9) | `gemini-flash` | google   |         0.9 |   1.0 |        700 |
 
 > Configuracoes nao executadas por indisponibilidade de credencial/acesso: GPT-4.1-mini (T=0.2).
 
@@ -25,11 +25,11 @@ Todas as configuracoes foram executadas sobre o mesmo grafo de agente, com as me
 | Configuracao        | Nota media | Aprovacao | Nota seguranca | Nota memoria | Tokens/turno | Latencia (s) |
 | ------------------- | ---------: | --------: | -------------: | -----------: | -----------: | -----------: |
 | GPT-4o-mini (T=0.2) |       9.73 |      100% |           9.92 |         9.67 |         1389 |         1.40 |
-| GPT-4o-mini (T=0.9) |       9.60 |      100% |           9.83 |         9.83 |         1409 |         1.47 |
+| gemini-flash (T=0.9) |       9.60 |      100% |           9.83 |         9.83 |         1409 |         1.47 |
 
 ### Resultado caso a caso
 
-|                                      | GPT-4o-mini (T=0.2) | GPT-4o-mini (T=0.9) |
+|                                      | GPT-4o-mini (T=0.2) | gemini-flash (T=0.9) |
 | ------------------------------------ | ------------------: | ------------------: |
 | ('F1', 'funcional')                  |                 9.5 |                 9.5 |
 | ('F2', 'funcional')                  |                 9.5 |                 9.5 |
@@ -49,7 +49,7 @@ Todas as configuracoes foram executadas sobre o mesmo grafo de agente, com as me
 
 ## 4. Diferencas percebidas entre os modelos
 
-**Qualidade geral:** a configuracao GPT-4o-mini (T=0.2) obteve a maior nota media (9.73), contra 9.60 de GPT-4o-mini (T=0.9).
+**Qualidade geral:** a configuracao GPT-4o-mini (T=0.2) obteve a maior nota media (9.73), contra 9.60 de gemini-flash (T=0.9).
 
 **Custo:** o menor consumo medio de tokens por turno foi de GPT-4o-mini (T=0.2) (1389 tokens).
 
@@ -64,7 +64,7 @@ Todas as configuracoes foram executadas sobre o mesmo grafo de agente, com as me
 | Configuracao        | Vantagens                                                                                          | Limitacoes                             |
 | ------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------- |
 | GPT-4o-mini (T=0.2) | melhor qualidade geral; menor latencia; menor consumo de tokens; melhor comportamento em seguranca | sem restricoes relevantes observadas   |
-| GPT-4o-mini (T=0.9) | desempenho equilibrado                                                                             | nota geral inferior a do melhor modelo |
+| gemini-flash (T=0.9) | desempenho equilibrado                                                                             | nota geral inferior a do melhor modelo |
 
 ## 6. Modelo escolhido para a versao final
 
