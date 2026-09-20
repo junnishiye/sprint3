@@ -1,4 +1,4 @@
-[README (3).md](https://github.com/user-attachments/files/32445680/README.3.md)
+
 # ChargeGrid Intelligence — Sprint 3
 ## Prototipagem Funcional e Integração
 
