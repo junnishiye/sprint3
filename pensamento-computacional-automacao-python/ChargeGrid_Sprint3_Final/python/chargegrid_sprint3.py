@@ -315,11 +315,16 @@ def main() -> None:
     parser.add_argument("--baud", type=int, default=9600)
     parser.add_argument(
         "--saida",
-        default="python/resultados_sprint3.csv",
-        help="arquivo CSV de saída",
+        default=None,
+        help="arquivo CSV de saída (padrão: resultados_sprint3.csv na mesma pasta do script)",
     )
 
     args = parser.parse_args()
+
+    # Caminho de saida sempre relativo ao proprio script, nunca ao
+    # diretorio de onde o comando foi executado (evita a pasta
+    # duplicada python/python/ quando rodado de dentro de python/).
+    saida = Path(args.saida) if args.saida else Path(__file__).parent / "resultados_sprint3.csv"
 
     if args.self_test:
         self_test()
@@ -331,13 +336,13 @@ def main() -> None:
 
     if args.serial:
         rows = serial_loop(args.serial, args.baud)
-        save(rows, Path(args.saida))
-        print(f"\nCSV salvo em: {args.saida}")
+        save(rows, saida)
+        print(f"\nCSV salvo em: {saida}")
         return
 
     rows = demo()
-    save(rows, Path(args.saida))
-    print(f"\nCSV salvo em: {args.saida}")
+    save(rows, saida)
+    print(f"\nCSV salvo em: {saida}")
 
 
 if __name__ == "__main__":

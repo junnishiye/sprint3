@@ -1,6 +1,6 @@
-Cenario,AUTH,VAGA,ENERGIA,S_SESSAO,PRIORIDADE,P_74HC,FINAL,ENERGIA_PCT
-1 - Sessao normal,1,1,1,1,0,0,1,85
-2 - Energia baixa,1,1,0,1,0,0,1,35
-3 - Sem vaga,1,0,1,0,0,0,0,90
-4 - Prioridade liberada,1,1,1,1,1,1,1,85
-5 - Prioridade bloqueada,1,1,1,1,1,0,0,85
+timestamp,auth,vaga,energia_arduino,energia_python,s_sessao_arduino,s_sessao_python,prioridade,p_74hc,final_arduino,final_python,energia_pct,status,potencia_kw,consistencia
+2026-09-20T22:12:29,1,1,1,1,1,1,0,0,1,1,85,AUTORIZADA,22.0,OK
+2026-09-20T22:12:29,1,1,0,0,1,1,0,0,1,1,35,LIMITADA,11.0,OK
+2026-09-20T22:12:29,1,0,1,1,0,0,0,0,0,0,90,BLOQUEADA,0.0,OK
+2026-09-20T22:12:29,1,1,1,1,1,1,1,1,1,1,85,AUTORIZADA,22.0,OK
+2026-09-20T22:12:29,1,1,1,1,1,1,1,0,0,0,85,BLOQUEADA,0.0,OK
